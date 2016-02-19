@@ -8,7 +8,10 @@ namespace NumToWordNS
     public HomeModule()
     {
       Get["/"] = _ => {
-        return View["header.cshtml"];
+        return View["index.cshtml", ""];
+      };
+      Post["/"] = _ => {
+        return View["index.cshtml", new NumToWord(long.Parse(Request.Form["num"])).ChangeToWord()];
       };
     }
   }

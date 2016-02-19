@@ -22,6 +22,7 @@ namespace NumToWordNS.Objects
       long num = _num;
       _output = new List<string>(){};
       Dictionary<string,long> placesToCheck = new Dictionary<string,long>(){};
+      placesToCheck.Add("quintillion", 1000000000000000000);
       placesToCheck.Add("quadrillion", 1000000000000000);
       placesToCheck.Add("trillion",    1000000000000);
       placesToCheck.Add("billion",     1000000000);
